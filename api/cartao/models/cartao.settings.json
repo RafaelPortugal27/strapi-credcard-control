@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cards",
+  "info": {
+    "name": "Cartao",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "maxLength": 100,
+      "minLength": 3,
+      "unique": true
+    },
+    "expiration_day": {
+      "type": "integer",
+      "required": true,
+      "max": 28,
+      "min": 1
+    },
+    "days_before_expiration_to_buy": {
+      "type": "integer",
+      "default": 5,
+      "max": 31,
+      "min": 0,
+      "required": true
+    },
+    "banner": {
+      "type": "string",
+      "maxLength": 20
+    },
+    "end_number_card": {
+      "max": 9999,
+      "type": "integer",
+      "min": 0
+    },
+    "gastos": {
+      "via": "cartao",
+      "collection": "gastos"
+    }
+  }
+}

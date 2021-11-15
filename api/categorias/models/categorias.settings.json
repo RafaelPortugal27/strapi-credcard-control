@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "category",
+  "info": {
+    "name": "Categorias"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 30,
+      "minLength": 3
+    },
+    "gastos": {
+      "via": "categoria",
+      "collection": "gastos"
+    }
+  }
+}

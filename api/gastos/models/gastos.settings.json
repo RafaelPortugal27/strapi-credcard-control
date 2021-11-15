@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "spending",
+  "info": {
+    "name": "Gastos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "string",
+      "required": true,
+      "maxLength": 100,
+      "minLength": 3
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "value": {
+      "type": "decimal",
+      "required": true
+    },
+    "installment": {
+      "type": "string",
+      "maxLength": 20,
+      "default": "1/1"
+    },
+    "cartao": {
+      "targetColumnName": "",
+      "via": "gastos",
+      "model": "cartao"
+    },
+    "categoria": {
+      "targetColumnName": "",
+      "model": "categorias",
+      "via": "gastos"
+    },
+    "expiration_date": {
+      "type": "date"
+    },
+    "expiration_month": {
+      "type": "date"
+    }
+  }
+}

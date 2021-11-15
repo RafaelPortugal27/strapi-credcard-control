@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/cartaos",
+      "handler": "cartao.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cartaos/count",
+      "handler": "cartao.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cartaos/:id",
+      "handler": "cartao.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/cartaos",
+      "handler": "cartao.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/cartaos/:id",
+      "handler": "cartao.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/cartaos/:id",
+      "handler": "cartao.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
